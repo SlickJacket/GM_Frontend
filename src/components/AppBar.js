@@ -26,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.primary.main,
     fontFamily: "Rowdies",
     marginLeft: "5%",
+    width: "100%",
   },
 }));
 
@@ -36,22 +37,30 @@ export default function AppBar() {
     <div className={classes.grow}>
       <Appbar position="static" color="white">
         <Toolbar className={classes.toolbar}>
-          <IconButton
-            edge="start"
-            className={classes.menuButton}
-            color="inherit"
-            aria-label="open drawer"
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography
-            className={classes.title}
-            variant="h4"
-            noWrap
-            className={classes.appName}
-          >
-            GM
-          </Typography>
+          <div>
+            <Grid container>
+              <Grid item>
+                <IconButton
+                  edge="start"
+                  className={classes.menuButton}
+                  color="inherit"
+                  aria-label="open drawer"
+                >
+                  <MenuIcon />
+                </IconButton>
+              </Grid>
+              <Grid item>
+                <Typography
+                  className={classes.title}
+                  variant="h4"
+                  noWrap
+                  className={classes.appName}
+                >
+                  GM
+                </Typography>
+              </Grid>
+            </Grid>
+          </div>
           <div>
             <Grid container alignItems="center" spacing={3}>
               <Grid item>
