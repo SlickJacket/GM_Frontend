@@ -2,7 +2,6 @@ import React from "react";
 
 // Material ui imports
 import { makeStyles } from "@material-ui/core/styles";
-import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 
 const useStyles = makeStyles((theme) => ({
@@ -25,12 +24,10 @@ export default function CompleteButton() {
   const classes = useStyles();
 
   return (
-    <Grid container>
-      <Grid item>
-        <Button variant="contained" color="primary" className={classes.button}>
-          Complete!
-        </Button>
-      </Grid>
-    </Grid>
+    
+    <Button variant="contained" color="primary" className={classes.button}>
+      
+    </Button>
+      
   );
 }
